@@ -60,7 +60,7 @@ function DraggableItem({ id, children }) {
     cursor: "grab",
     display: "inline-block",
     width: "100%",
-    touchAction: "none", // verhindert ungewolltes Scrollen auf Touchgeräten
+    touchAction: "none", // verhindert ungewolltes Scrollen auf Touchgeräten und bei draganddrop
   };
 
   return (
