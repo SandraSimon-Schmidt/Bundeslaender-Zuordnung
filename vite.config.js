@@ -10,7 +10,8 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    port: 8080
+    port: 8080,
+    allowedHosts: ['localhost', 'bundeslaender-zuordnung.onrender.com']
   }
   
 });
