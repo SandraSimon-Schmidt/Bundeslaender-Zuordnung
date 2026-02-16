@@ -284,14 +284,14 @@ export default function App() {
         <div
           style={{
             display: "flex",
-            width: "70%",
+            width: "90%",
             justifyContent: "space-between",
           }}
         >
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateColumns: "repeat(4, 1fr)",
               gap: "8px",
             }}
           >
