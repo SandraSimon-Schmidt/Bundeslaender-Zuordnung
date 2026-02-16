@@ -215,7 +215,7 @@ export default function App() {
     <div
       style={{
         width: "100vw",
-        height: "100vh",
+        minheight: "100vh",
         overflow: "hidden",
         backgroundColor: "#f0f0f0",
         display: "flex",
@@ -237,15 +237,8 @@ export default function App() {
         sobald alle Städte zugeordnet sind.
       </h3>
 
-      <div
-        style={{
-          display: "flex",
-          width: "70%",
-          justifyContent: "space-between",
-          marginBottom: "20px",
-          alignItems: "center",
-          flexWrap: "wrap",
-        }}
+      <div  className="top-bar"
+      
       >
         <input
           style={{ width: "25%", padding: "5px", fontSize: "16px", color: "#000"  }}
@@ -281,19 +274,11 @@ export default function App() {
         onDragOver={handleDragOver}
         onDragEnd={handleDragEnd}
       >
-        <div
-          style={{
-            display: "flex",
-            width: "90%",
-            justifyContent: "space-between",
-          }}
+        <div className="drag-container"
+        
         >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "8px",
-            }}
+          <div className="bundeslaender-grid"
+         
           >
             {bundeslaender.map((b) => (
               <DroppableItem
@@ -306,12 +291,8 @@ export default function App() {
             ))}
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "5px",
-            }}
+          <div className="staedte-grid"
+           
           >
             {staedte.map((s) => (
               <DraggableItem key={s} id={s}>

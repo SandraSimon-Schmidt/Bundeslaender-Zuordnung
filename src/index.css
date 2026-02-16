@@ -2,7 +2,7 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -12,10 +12,83 @@ h1 {
   line-height: 0.3;
 }
 
-html, body {
-  overflow: hidden;
+.top-bar {          
+  display: flex;
+          
+          width: 70%;
+          justify-content: space-between;
+          margin-bottom: 20px;
+       
+          align-items: center;
+          
+        }
+.drag-container{
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  justify-content: space-between;
+}
+/* Bundesländer Grid */
+.bundeslaender-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  flex: 1;
 }
 
+/* Städte Grid */
+.staedte-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  flex: 1;
+}
+@media (max-width: 1400px) {
+  .bundeslaender-grid,
+  .staedte-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1250px) {
+  .bundeslaender-grid,
+  .staedte-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+  font-size: 2.2rem;
+  line-height: 0.3;
+}
+}
+@media (max-width: 768px) {
+  .top-bar {          
+  display: flex;
+          flex-direction: column;
+          width: 70%;
+          justify-content: space-between;
+          margin-bottom: 20px;
+       
+          align-items: center;
+          
+        }
+  .bundeslaender-grid,
+  .staedte-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h1 {
+  
+  font-size: 1.8rem;
+  line-height: 0.8;
+  
+}
 
-
-
+}
+@media (max-width: 400px) {
+  
+  .drag-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  justify-content: space-between;
+}
+  }
